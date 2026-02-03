@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Login from "./Components/Login.jsx";
 import Home from "./Components/Home.jsx";
@@ -21,15 +21,13 @@ import Kids from "./Components/Kids.jsx";
 import Accessories from "./Components/Accessories.jsx";
 import Detail from "./Components/Detail.jsx";
 
-
-
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
-  const [cart, setCart] = useState([]); // ✅ ADD THIS
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -38,7 +36,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* HOME PAGE */}
         <Route
           path="/"
           element={
@@ -93,7 +90,6 @@ function App() {
           }
         />
 
-        {/* CART PAGE */}
         <Route
           path="/card"
           element={
@@ -113,6 +109,7 @@ function App() {
             </>
           }
         />
+
         <Route
           path="/Women"
           element={
@@ -127,6 +124,7 @@ function App() {
             </>
           }
         />
+
         <Route
           path="/Men"
           element={
@@ -137,6 +135,7 @@ function App() {
             </>
           }
         />
+
         <Route
           path="/Kids"
           element={
@@ -147,6 +146,7 @@ function App() {
             </>
           }
         />
+
         <Route
           path="/Accessories"
           element={
@@ -161,13 +161,14 @@ function App() {
             </>
           }
         />
+
         <Route
           path="/detail"
           element={
             <>
               <Home cartCount={cartCount} />
-              <Detail 
-                cart={cart}        
+              <Detail
+                cart={cart}
                 setCart={setCart}
                 setCartCount={setCartCount}
               />
