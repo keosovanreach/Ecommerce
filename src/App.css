@@ -1,0 +1,71 @@
+/* body {
+  cursor: url("https://cur.cursors-4u.net/symbols/sym-1/sym46.cur"), auto;
+}
+
+.hero-section {
+  cursor: pointer;
+} */
+ 
+
+
+
+.hero {
+   background-color:gray-900;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+
+  }
+  .W {
+    animation: upDown 2s ease-in-out infinite;
+  }
+  
+  @keyframes upDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* move up */
+    }
+  }
+  .button {
+    margin-top: 20px;
+    padding: 12px 26px;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    box-shadow: 0 6px 15px rgba(255, 118, 136, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 118, 136, 0.6);
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+  body {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text x='0' y='24' font-size='24'>⭐</text></svg>") 16 16, auto;
+  }
+  
+  
+  
+  
+    
+  
+  
