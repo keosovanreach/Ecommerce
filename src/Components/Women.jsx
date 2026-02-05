@@ -103,49 +103,51 @@ function Women({ setCart, setCartCount }) {
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 pb-20">
         {products.map((product, index) => (
-          <div
-            key={index}
-            className="group relative h-[380px] rounded-2xl overflow-hidden
+          <Link to="/detail" state={{ product }}>
+            <div
+              key={index}
+              className="group relative h-[380px] rounded-2xl overflow-hidden
               bg-white/5 backdrop-blur-lg border border-white/10
               hover:scale-105 transition-all duration-300 shadow-lg"
-          >
-            {/* Category badge */}
-            <span
-              className="absolute top-3 left-3 z-20 bg-gradient-to-r from-pink-500 to-red-500
-              text-xs px-3 py-1 rounded-full font-semibold"
             >
-              {product.category}
-            </span>
+              {/* Category badge */}
+              <span
+                className="absolute top-3 left-3 z-20 bg-gradient-to-r from-pink-500 to-red-500
+              text-xs px-3 py-1 rounded-full font-semibold"
+              >
+                {product.category}
+              </span>
 
-            {/* Image */}
-            <img
-              src={product.image}
-              alt={product.title}
-              className="absolute inset-0 w-full h-full object-cover
+              {/* Image */}
+              <img
+                src={product.image}
+                alt={product.title}
+                className="absolute inset-0 w-full h-full object-cover
                 group-hover:scale-110 transition-transform duration-500"
-            />
+              />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition"></div>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition"></div>
 
-            {/* Info */}
-            <div className="absolute bottom-0 w-full p-4 z-10">
-              <h2 className="text-lg font-semibold">{product.title}</h2>
-              <p className="text-pink-400 font-bold">{product.price}</p>
+              {/* Info */}
+              <div className="absolute bottom-0 w-full p-4 z-10">
+                <h2 className="text-lg font-semibold">{product.title}</h2>
+                <p className="text-pink-400 font-bold">{product.price}</p>
 
-              <button
-                onClick={() => {
-                  setCart((prev) => [...prev, product]);
-                  setCartCount((prev) => prev + 1);
-                }}
-                className="mt-3 w-full py-2 rounded-lg bg-gradient-to-r from-pink-500 to-red-500
+                <button
+                  onClick={() => {
+                    setCart((prev) => [...prev, product]);
+                    setCartCount((prev) => prev + 1);
+                  }}
+                  className="mt-3 w-full py-2 rounded-lg bg-gradient-to-r from-pink-500 to-red-500
                   hover:from-red-500 hover:to-pink-500 transition font-medium
                   opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 duration-300 cursor-pointer"
-              >
-                🛒 Add to Cart
-              </button>
+                >
+                  🛒 Add to Cart
+                </button>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

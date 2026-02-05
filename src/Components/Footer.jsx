@@ -1,6 +1,9 @@
 import React from "react";
 
 function Footer() {
+  const socialClasses =
+    "px-4 py-2 rounded-md border border-gray-600 text-gray-400 hover:bg-sky-500 hover:border-sky-500 hover:text-white transition hover:shadow-xl hover:shadow-sky-400";
+
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-6 py-14 font-poppins">
@@ -17,12 +20,13 @@ function Footer() {
               with quality and affordability.
             </p>
           </div>
+
           {/* Contact */}
           <div>
             <h2 className="text-xl font-semibold mb-4 relative after:block after:w-10 after:h-1 after:bg-sky-500 after:mt-2">
               Contact Us
             </h2>
-            <ul className="space-y-2 text-sm text-gray-400 cursor-pointer ">
+            <ul className="space-y-2 text-sm text-gray-400 cursor-pointer">
               <li>📧 Coc80076@gmail.com</li>
               <li>📞 +855 772 634 81</li>
               <li>📍 12000 St, Phnom Penh, Cambodia</li>
@@ -35,32 +39,23 @@ function Footer() {
               Follow Us
             </h2>
             <div className="flex space-x-4 mt-3">
-              {/* {["Facebook", "Twitter", "Instagram"].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="px-4 py-2 rounded-md border border-gray-600 text-gray-400 hover:bg-sky-500 hover:border-sky-500 hover:text-white transition"
-                >
-                  {social}
-                </a>
-              ))} */}
-              <a href="">
-                <i class="fa-brands fa-facebook px-4 py-2 rounded-md border border-gray-600 text-gray-400 hover:bg-sky-500 hover:border-sky-500 hover:text-white transition hover:shadow-xl hover:shadow-sky-400"></i>
+              <a href="#" className={socialClasses}>
+                <i className="fa-brands fa-facebook"></i>
               </a>
-              <a href="">
-                <i class="fa-brands fa-twitter px-4 py-2 rounded-md border border-gray-600 text-gray-400 hover:bg-sky-500 hover:border-sky-500 hover:text-white transition hover:shadow-xl hover:shadow-sky-400"></i>
+              <a href="#" className={socialClasses}>
+                <i className="fa-brands fa-twitter"></i>
               </a>
-              <a href="">
-                <i class="fa-brands fa-telegram px-4 py-2 rounded-md border border-gray-600 text-gray-400 hover:bg-sky-500 hover:border-sky-500 hover:text-white transition hover:shadow-xl hover:shadow-sky-400"></i>
+              <a href="#" className={socialClasses}>
+                <i className="fa-brands fa-telegram"></i>
               </a>
-              <a href="">
-                <i class="fa-brands fa-instagram px-4 py-2 rounded-md border border-gray-600 text-gray-400 hover:bg-sky-500 hover:border-sky-500 hover:text-white transition hover:shadow-xl hover:shadow-sky-400"></i>
+              <a href="#" className={socialClasses}>
+                <i className="fa-brands fa-instagram"></i>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Divider */}
+        {/* Footer bottom */}
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-500">
           © {new Date().getFullYear()} YourStore. All rights reserved.
         </div>

@@ -109,7 +109,7 @@ function Slide({ setCartCount }) {
             </p>
           </div>
 
-          {/* Search Box */}
+         
           <div className="flex w-full md:w-auto">
             <input
               type="text"

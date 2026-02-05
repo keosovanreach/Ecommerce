@@ -56,7 +56,7 @@ function Detail({ cart, setCart, setCartCount }) {
             Add to Cart
           </button>
           <button onClick={() => navigate(-1)} className="mt-4 w-full bg-pink-500 text-white py-2 rounded-md hover:bg-red-600 transition flex items-center justify-center cursor-pointer">
-            <i className="fa fa-heart mr-2 "></i>
+            
             Back
           </button>
 

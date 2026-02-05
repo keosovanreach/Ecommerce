@@ -116,6 +116,7 @@ function Kids({ setCart, setCartCount }) {
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 pb-20">
         {products.map((product, index) => (
+           <Link to="/detail" state={{ product }}>
           <div
             key={index}
             className="group relative h-[380px] rounded-2xl overflow-hidden
@@ -159,6 +160,7 @@ function Kids({ setCart, setCartCount }) {
               </button>
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>

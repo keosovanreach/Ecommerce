@@ -146,7 +146,7 @@ function Shop({ cart, setCart, setCartCount }) {
                 {product.category}
               </span>
 
-              {/* Image */}
+              
 
               <img
                 src={product.image}
