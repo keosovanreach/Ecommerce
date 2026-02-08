@@ -22,8 +22,9 @@ function Detail({ cart, setCart, setCartCount }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center px-4">
-      <div className="max-w-5xl w-full bg-gray-800 rounded-2xl shadow-2xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center px-4 ">
+      
+      <div className="max-w-5xl w-full bg-gray-800 rounded-2xl shadow-2xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 mt-35">
         {/* Product Image */}
         <div className="flex justify-center">
           <img
